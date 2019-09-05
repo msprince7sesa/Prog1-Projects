@@ -1,0 +1,135 @@
+package projects;
+
+import java.util.Scanner;
+
+public class ProjectEliza {
+	
+
+
+	public static void main(String[] args) {
+
+		while(true){
+
+			Scanner scnr = new Scanner(System.in);
+
+		System.out.println("ELIZA: Hello, my name is Eliza. What is your name? ");
+
+		System.out.print("USER: ");
+
+			String name=scnr.next();
+
+		System.out.println("ELIZA: Hello, "+ name+ ". Tell me what is on your mind today in 1 sentence.");
+
+			String sentence = " ";
+
+while(!sentence.equalsIgnoreCase("EXIT")){
+
+System.out.print("USER: ");
+
+	sentence=scnr.next();
+
+		sentence += scnr.nextLine();
+
+	if(!sentence.equalsIgnoreCase("EXIT")){
+
+	String[] wordBank = sentence.split("\\s+");
+
+	if (sentence.charAt(sentence.length() - 1)=='?'){
+
+		System.out.println("ELIZA: "+ PromptBank.question1(wordBank));
+
+	}
+	else if (sentence.charAt(sentence.length() - 1)=='!'){
+
+		sentence = sentence.substring(0,sentence.length()-1);
+
+		wordBank = sentence.split("\\s+");
+
+	System.out.println("ELIZA: "+PromptBank.question3(wordBank));
+
+	}
+	else{
+
+	System.out.println("ELIZA: "+PromptBank.question2(wordBank));
+}
+
+}
+
+}
+
+System.out.println("ELIZA: Do you want to run the session again?");
+
+System.out.println("USER: ");
+
+String yesNo=scnr.next().toLowerCase();
+
+	if(yesNo.equals("yes")){
+
+	}
+	else{
+
+		System.out.println("ELIZA: Goodbye, until next time");
+
+		break;
+		
+
+}
+//	break;
+
+} 
+		
+
+	}
+
+
+
+
+
+}
+
+//class PromptBank {
+//	
+//
+//
+//	public static String getit(){
+//
+//		return "letsgo!";
+//
+//		}
+//
+//		public static String question1(String[] wordBank){
+//
+//		String result= "Does "+wordBank[0]+" bother you? How about "+wordBank[(wordBank.length)-1];
+//
+//		return result;
+//
+//		}
+//
+//		public static String question2(String[] wordBank){
+//
+//		String result= wordBank[0]+" seems important to you, so does "+wordBank[(wordBank.length)-1]+" Please tell me more";
+//
+//		return result;
+//		
+//
+//		}
+//		
+//
+//		public static String question3(String[] wordBank){
+//
+//		String result= "WOW! Dramatic! "+wordBank[0]+" and "+wordBank[(wordBank.length)-1]+" seems to be on your mind. Let's talk about it";
+//
+//		return result;
+//
+//		}
+//		
+//
+//
+//		}
+//
+//
+
+//
+//
+//
+//
