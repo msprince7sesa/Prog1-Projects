@@ -1,0 +1,44 @@
+package projects;
+import java.util.Random;
+
+public class PromptBank {
+	
+
+
+	public static String getit(){
+
+		return "letsgo!";
+
+		}
+
+		public static String question1(String[] wordBank){
+
+		String result= "Does "+wordBank[0]+" bother you? How about "+wordBank[(wordBank.length)-1];
+
+		return result;
+
+		}
+
+		public static String question2(String[] wordBank){
+
+		String result= wordBank[0]+" seems important to you, so does "+wordBank[(wordBank.length)-1]+" Please tell me more";
+
+		return result;
+		
+
+		}
+		
+
+		public static String question3(String[] wordBank){
+
+		String result= "WOW! Dramatic! "+wordBank[0]+" and "+wordBank[(wordBank.length)-1]+" seems to be on your mind. Let's talk about it";
+
+		return result;
+
+		}
+		
+
+
+		}
+
+
